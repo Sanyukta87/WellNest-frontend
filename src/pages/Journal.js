@@ -11,7 +11,8 @@ function Journal() {
   // Fetch journals
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/journal", {
+      .get("https://wellnest-backend-3911.onrender.com
+/api/journal", {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((res) => setEntries(res.data))
@@ -22,7 +23,8 @@ function Journal() {
     e.preventDefault();
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/journal",
+        "https://wellnest-backend-3911.onrender.com
+/api/journal",
         { title, content },
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -36,7 +38,8 @@ function Journal() {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/journal/${id}`, {
+      await axios.delete(`https://wellnest-backend-3911.onrender.com
+/api/journal/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setEntries(entries.filter((entry) => entry._id !== id));

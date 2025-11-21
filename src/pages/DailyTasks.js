@@ -7,7 +7,8 @@ function DailyTasks() {
 
   const fetchTasks = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/tasks", {
+      const res = await axios.get("https://wellnest-backend-3911.onrender.com
+/api/tasks", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setTasks(res.data);
@@ -19,7 +20,8 @@ function DailyTasks() {
   const completeTask = async (id) => {
     try {
       await axios.post(
-        `http://localhost:5000/api/tasks/complete/${id}`,
+        `https://wellnest-backend-3911.onrender.com
+/api/tasks/complete/${id}`,
         {},
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -31,8 +33,8 @@ function DailyTasks() {
   };
 
   useEffect(() => {
-    fetchTasks();
-  }, []);
+  fetchTasks();
+}, [fetchTasks]);
 
   return (
     <div className="min-h-screen bg-emerald-50 flex flex-col items-center justify-center p-6">

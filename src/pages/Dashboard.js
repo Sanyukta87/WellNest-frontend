@@ -29,7 +29,8 @@ function Dashboard() {
 
       // Fetch user info
       axios
-        .get(`http://localhost:5000/api/auth/user/${decoded.id}`, {
+        .get(`https://wellnest-backend-3911.onrender.com
+/api/auth/user/${decoded.id}`, {
           headers: { Authorization: `Bearer ${token}` },
         })
         .then((res) => setUser(res.data))
@@ -37,7 +38,8 @@ function Dashboard() {
 
       // Fetch gamified progress
       axios
-        .get("http://localhost:5000/api/gamify/progress", {
+        .get("https://wellnest-backend-3911.onrender.com
+/api/gamify/progress", {
           headers: { Authorization: `Bearer ${token}` },
         })
         .then((res) => setProgress(res.data))
@@ -247,7 +249,8 @@ function Dashboard() {
               try {
                 const token = localStorage.getItem("token");
                 await axios.post(
-                  "http://localhost:5000/api/sos/send",
+                  "https://wellnest-backend-3911.onrender.com
+/api/sos/send",
                   { message: "SOS alert triggered from WellNest Dashboard." },
                   { headers: { Authorization: `Bearer ${token}` } }
                 );

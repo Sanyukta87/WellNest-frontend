@@ -10,7 +10,8 @@ function EmergencyContactForm() {
     const fetchContact = async () => {
       try {
         const token = localStorage.getItem("token");
-        const res = await axios.get("http://localhost:5000/api/profile/me", {
+        const res = await axios.get("https://wellnest-backend-3911.onrender.com
+/api/profile/me", {
           headers: { Authorization: `Bearer ${token}` },
         });
         setContact(res.data.emergencyContact || "");
@@ -32,7 +33,8 @@ function EmergencyContactForm() {
     try {
       const token = localStorage.getItem("token");
       await axios.put(
-        "http://localhost:5000/api/profile/emergency-contact",
+        "https://wellnest-backend-3911.onrender.com
+/api/profile/emergency-contact",
         { emergencyContact: contact },
         { headers: { Authorization: `Bearer ${token}` } }
       );

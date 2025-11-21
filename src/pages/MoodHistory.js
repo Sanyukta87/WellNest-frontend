@@ -11,7 +11,8 @@ function MoodHistory() {
     if (!token) return toast.error("Please log in first.");
 
     axios
-      .get("http://localhost:5000/api/moods/history", {
+      .get("https://wellnest-backend-3911.onrender.com
+/api/moods/history", {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((res) => setMoods(res.data))
