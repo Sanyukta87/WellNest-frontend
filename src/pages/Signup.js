@@ -18,8 +18,10 @@ function Signup() {
   const handleSignup = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("https://wellnest-backend-3911.onrender.com
-/api/auth/signup", formData);
+      await axios.post(
+  "https://wellnest-backend-3911.onrender.com/api/auth/signup",
+  formData
+);
       alert("Account created successfully 🌸");
       navigate("/");
     } catch (error) {
