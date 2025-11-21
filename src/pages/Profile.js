@@ -51,8 +51,7 @@ function Profile() {
     const token = localStorage.getItem("token");
     try {
       const res = await axios.put(
-        "https://wellnest-backend-3911.onrender.com
-/api/profile/update",
+        "https://wellnest-backend-3911.onrender.com/api/profile/update",
         formData,
         { headers: { Authorization: `Bearer ${token}` } }
       );

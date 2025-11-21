@@ -35,8 +35,7 @@ const MoodTracker = () => {
 
     try {
       await axios.post(
-        "https://wellnest-backend-3911.onrender.com
-/api/moods/add",
+        "https://wellnest-backend-3911.onrender.com/api/moods/add",
         { mood: selectedMood.label },
         {
           headers: { Authorization: `Bearer ${token}` },

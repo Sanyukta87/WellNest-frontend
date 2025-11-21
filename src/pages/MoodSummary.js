@@ -12,8 +12,7 @@ function MoodSummary() {
     if (!token) return toast.error("Please log in first.");
 
     axios
-      .get("https://wellnest-backend-3911.onrender.com
-/api/moods/summary", {
+      .get("https://wellnest-backend-3911.onrender.com/api/moods/summary", {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((res) => setSummary(res.data))

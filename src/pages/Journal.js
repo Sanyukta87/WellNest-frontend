@@ -11,8 +11,7 @@ function Journal() {
   // Fetch journals
   useEffect(() => {
     axios
-      .get("https://wellnest-backend-3911.onrender.com
-/api/journal", {
+      .get("https://wellnest-backend-3911.onrender.com/api/journal", {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((res) => setEntries(res.data))
@@ -23,8 +22,7 @@ function Journal() {
     e.preventDefault();
     try {
       const res = await axios.post(
-        "https://wellnest-backend-3911.onrender.com
-/api/journal",
+        "https://wellnest-backend-3911.onrender.com/api/journal",
         { title, content },
         { headers: { Authorization: `Bearer ${token}` } }
       );

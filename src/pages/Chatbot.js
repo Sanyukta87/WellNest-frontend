@@ -32,8 +32,7 @@ function Chatbot() {
     try {
       const token = localStorage.getItem("token");
       const res = await axios.post(
-        "https://wellnest-backend-3911.onrender.com
-/api/ai/chat",
+        "https://wellnest-backend-3911.onrender.com/api/ai/chat",
         { message: userMessage },
         { headers: { Authorization: `Bearer ${token}` } }
       );

@@ -38,8 +38,7 @@ function Dashboard() {
 
       // Fetch gamified progress
       axios
-        .get("https://wellnest-backend-3911.onrender.com
-/api/gamify/progress", {
+        .get("https://wellnest-backend-3911.onrender.com/api/gamify/progress", {
           headers: { Authorization: `Bearer ${token}` },
         })
         .then((res) => setProgress(res.data))
@@ -249,8 +248,7 @@ function Dashboard() {
               try {
                 const token = localStorage.getItem("token");
                 await axios.post(
-                  "https://wellnest-backend-3911.onrender.com
-/api/sos/send",
+                  "https://wellnest-backend-3911.onrender.com/api/sos/send",
                   { message: "SOS alert triggered from WellNest Dashboard." },
                   { headers: { Authorization: `Bearer ${token}` } }
                 );

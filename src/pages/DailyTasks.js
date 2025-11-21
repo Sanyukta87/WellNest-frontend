@@ -7,8 +7,7 @@ function DailyTasks() {
 
   const fetchTasks = async () => {
     try {
-      const res = await axios.get("https://wellnest-backend-3911.onrender.com
-/api/tasks", {
+      const res = await axios.get("https://wellnest-backend-3911.onrender.com/api/tasks", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setTasks(res.data);
