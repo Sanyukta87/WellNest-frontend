@@ -7,8 +7,7 @@ function WellnessProgressCard() {
 
   useEffect(() => {
     axios
-      .get("https://wellnest-backend-3911.onrender.com
-/api/gamify/progress", {
+      .get("https://wellnest-backend-3911.onrender.com/api/gamify/progress", {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((res) => setProgress(res.data))
